@@ -11,26 +11,5 @@ SCoordinates matrix(std::vector<std::vector<int>> &field) {
 			0
 	};
 
-	bool breaking = false;
-
-	for (int i = 0; i < field.size(); i++) {
-		if (breaking) {
-			break;
-		}
-
-		auto row = field[i];
-
-		for (int j = 0; j < row.size(); j++) {
-			auto cell = row[j];
-
-			if (cell == 1) {
-				res.x = j;
-				res.y = i;
-				breaking = true;
-				break;
-			}
-		}
-	}
-
 	return res;
 }
